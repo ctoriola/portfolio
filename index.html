@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="hello">Hello, World</h1>
+    <button type="button" onclick="changeContentandColor('hello', 'Goodbye, World', 'red')">
+        Click to Change
+    </button>
+
+    <h2 id="header">This is a header</h2>
+    <button type="button" onclick="changeContent('header', 'This is not a header')">
+        Click to Change
+    </button>
+    <button type="button" onclick="disappear('header')">
+        Click Make Disappear
+    </button>
+    <button type="button" onclick="appear('header')">
+        Click to Make Appear
+    </button>
+
+    <br>
+    <img src="images/worm-bg.png" width="500px" id="image">
+    <br>
+    <button type="button" onclick="changeImage('image', 'images/3.jpeg')">
+        Click to Change Image
+    </button>
+    <br>
+
+    <script>
+        function changeContent(id, content, color){
+            document.getElementById(id).innerHTML = content;
+        };
+
+        function changeContentandColor(id, content, color){
+            document.getElementById(id).innerHTML = content;
+            document.getElementById(id).style.color = color;
+        };
+
+        function changeImage(id, img){
+            document.getElementById(id).src = img;
+        };
+
+        function appear(id){
+            document.getElementById(id).style.visibility = 'visible';
+        }
+
+        function disappear(id){
+            document.getElementById(id).style.visibility = 'hidden';
+        }    
+    </script>
+</body>
+</html>
